@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas - SVG</title>
+    <style type="text/css">
+        body {
+            margin: 30px auto;
+        }
+        canvas {
+            background-color: #f0ffff;
+            display: block;
+            margin: 10px;
+            float: left;
+            margin: 20px;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            const myCanvas1 = document.getElementById('myCanvas1')
+            const cxt2d1 = myCanvas1.getContext('2d')
+            cxt2d1.fillStyle = '#f00'
+            cxt2d1.fillRect(0,0,150,75)
+
+            const myCanvas2 = document.getElementById('myCanvas2')
+            const cxt2d2 = myCanvas2.getContext('2d')
+            cxt2d2.strokeStyle = '#b22bff'
+            cxt2d2.moveTo(10,10)
+            cxt2d2.lineTo(150,50)
+            cxt2d2.lineTo(10,50)
+            cxt2d2.closePath()
+            cxt2d2.stroke() //空心
+
+            const myCanvas3 = document.getElementById('myCanvas3')
+            const cxt2d3 = myCanvas3.getContext('2d')
+            cxt2d3.fillStyle = '#f00'
+            cxt2d3.arc(100,100,50,0,Math.PI,false)
+            cxt2d3.closePath()
+            cxt2d3.fill()
+
+            const myCanvas4 = document.getElementById('myCanvas4')
+            const cxt2d4 = myCanvas4.getContext('2d')
+            const img = new Image()
+            img.src = '../data/img/hua.gif'
+            cxt2d4.drawImage(img,0,0,200,100)
+
+        }
+    </script>
+</head>
+<body>
+    <canvas
+        id="myCanvas1"
+        width="200px"
+        height="200px">
+    </canvas>
+    <canvas
+            id="myCanvas2"
+            width="200px"
+            height="200px">
+    </canvas>
+    <canvas
+            id="myCanvas3"
+            width="200px"
+            height="200px">
+    </canvas>
+    <canvas
+            id="myCanvas4"
+            width="200px"
+            height="200px">
+    </canvas>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <polygon
+           points="100,10 40,180 190,60 10,60 160,180"
+           style="fill:lime;stroke:purple;stroke-width:5px;fill-rule:evenodd;" />
+    </svg>
+</body>
+</html>

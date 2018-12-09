@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" manifest="">
+<head>
+    <meta charset="UTF-8">
+    <title>Location</title>
+    <script>
+        window.onload = function () {
+            //Mac上好像用不了
+            const h1 = document.getElementsByTagName('h1')[0]
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition,showError)
+
+                function showPosition(position) {
+                    h1.innerHTML = 'Latitude: '+position.coords.latitude+'<br>'+"Longitude:"+position.coords.longitude
+                }
+
+                function showError(error)
+                {
+                    switch(error.code)
+                    {
+                        case error.PERMISSION_DENIED:
+                            h1.innerHTML="User denied the request for Geolocation."
+                            break;
+                        case error.POSITION_UNAVAILABLE:
+                            h1.innerHTML="Location information is unavailable."
+                            break;
+                        case error.TIMEOUT:
+                            h1.innerHTML="The request to get user location timed out."
+                            break;
+                        case error.UNKNOWN_ERROR:
+                            h1.innerHTML="An unknown error occurred."
+                            break;
+                        default:
+                            h1.innerHTML = "未知错误"
+                            break
+                    }
+                }
+            } else {
+                h1.innerHTML='获取地址定位失败'
+            }
+        }
+        function setLocal() {
+            const localSetKey = document.getElementById('local_set_key').value
+            const localSetValue = document.getElementById('local_set_value').value
+            const tip1 = document.getElementById('tip1')
+
+            localStorage[localSetKey] = localSetValue
+            tip1.innerHTML = `存储${localSetKey} = ${localSetValue} 成功`
+        }
+        function getLocal() {
+            const localGetKey = document.getElementById('local_get_key').value
+            const tip1 = document.getElementById('tip1')
+            tip1.innerHTML = `读取${localGetKey} = ${localStorage[localGetKey]} 成功`
+        }
+        function setSession() {
+            const sessionSetKey = document.getElementById('session_set_key').value
+            const sessionSetValue = document.getElementById('session_set_value').value
+            const tip2 = document.getElementById('tip2')
+
+            sessionStorage[sessionSetKey] = sessionSetValue
+            tip2.innerHTML = `存储${sessionSetKey} = ${sessionSetValue} 成功`
+        }
+        function getSelection() {
+            const sessionGetKey = document.getElementById('session_get_key').value
+            const tip2 = document.getElementById('tip2')
+            tip2.innerHTML = `读取${sessionGetKey} = ${sessionStorage[sessionGetKey]} 成功`
+        }
+    </script>
+</head>
+<body>
+    <h1>获取地址中... ...</h1>
+    <div>
+        localStorage 方法存储的数据没有时间限制。第二天、第二周或下一年之后，数据依然可用。
+    </div>
+    <div>
+        <input value="key" id="local_set_key"/>
+        <input value="value" id="local_set_value"/>
+        <button onclick="setLocal()">存储Local</button>
+    </div>
+    <div>
+        <input value="key" id="local_get_key"/>
+        <button onclick="getLocal()">获取存储Local</button>
+    </div>
+    <p id="tip1"></p>
+
+    <br/><br/>
+    <div>
+        sessionStorage 方法针对一个 session 进行数据存储。当用户关闭浏览器窗口后，数据会被删除
+    </div>
+    <div>
+        <input value="key" id="session_set_key"/>
+        <input value="value" id="session_set_value"/>
+        <button onclick="setSession()">存储Session</button>
+    </div>
+    <div>
+        <input value="key" id="session_get_key"/>
+        <button onclick="getSelection()">获取存储Session</button>
+    </div>
+    <p id="tip2"></p>
+</body>
+</html>

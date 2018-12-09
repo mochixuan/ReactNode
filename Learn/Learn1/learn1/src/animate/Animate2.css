@@ -1,0 +1,25 @@
+.wx-enter,.wx-appear {
+    opacity: 0;
+}
+
+.wx-enter-active,.wx-appear-active {
+    opacity: 1;
+    transition: all 1s ease-in;
+}
+
+.wx-enter-done {
+    opacity: 1;
+}
+
+.wx-exit {
+    opacity: 1;
+}
+
+.wx-exit-active {
+    opacity: 0;
+    transition: all 1s ease-in;
+}
+
+.wx-exit-done {
+    opacity: 0;
+}
