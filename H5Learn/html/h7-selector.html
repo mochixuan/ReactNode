@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪元素</title>
+    <style type="text/css">
+        .nav {
+            height: 36px;
+            width: 400px;
+            background-color: red;
+            border-radius: 4px;
+            padding: 0;
+            margin: 20px auto;
+            box-shadow: 0px 4px 0px #aa0000;
+        }
+        .nav>li {
+            display: inline-block;
+            width: 100px;
+            height: 36px;
+            text-align: center;
+            float: left;
+            position: relative;
+        }
+        .nav>li>a {
+            text-decoration: none;
+            line-height: 36px;
+            color: white;
+            text-shadow: 2px 2px 2px #222;
+        }
+        .nav>li::before {
+            content: "";
+            position: absolute;
+            top: 6px;
+            left: 0px;
+            width: 2px;
+            height: 24px;
+            background-color: white;
+        }
+        .nav>li:first-child::before{
+            content: "";
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <ul class="nav">
+        <li><a href="h7-selector.html">Home</a></li>
+        <li><a href="h7-selector.html">Find</a></li>
+        <li><a href="h7-selector.html">Market</a></li>
+        <li><a href="h7-selector.html">User</a></li>
+    </ul>
+</body>
+</html>
