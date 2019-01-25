@@ -1,0 +1,46 @@
+#home-header {
+    background-color: rgb(233, 32, 61);
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    color: #fff;
+    font-size: 16px;
+    line-height: 1;
+}
+
+#home-header > div {
+    cursor: pointer;
+}
+
+.home-header-left {
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 50px;
+
+}
+
+.home-header-center {
+    flex: 1;
+    background-color: #fff;
+    height: 30px;
+    border-radius: 15px;
+
+    padding-left: 10px;
+    color: #CDCDCD !important;
+    line-height: 30px;
+}
+
+.home-header-center > span {
+    color: #ccc;
+    font-size: 14px;
+    margin-left: 4px;
+}
+
+.home-header-right {
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 50px;
+    line-height: 50px;
+}

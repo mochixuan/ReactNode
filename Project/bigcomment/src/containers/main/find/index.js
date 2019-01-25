@@ -1,10 +1,13 @@
 import React,{Component} from 'react'
 import {connect} from 'react-redux'
+import './style.css'
 
 class Page extends Component{
     render() {
         return (
-            <div>HomePage</div>
+            <div className={'find'}>
+                发现
+            </div>
         )
     }
 }
@@ -17,6 +20,6 @@ const mapDispatchToProps = (dispatch) => ({
 
 })
 
-const HomePage = connect(mapStateToProps,mapDispatchToProps)(Page)
+const FindTabPage = connect(mapStateToProps,mapDispatchToProps)(Page)
 
-export {HomePage}
+export {FindTabPage}

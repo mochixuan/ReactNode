@@ -1,0 +1,33 @@
+.base-content {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: skyblue;
+
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    height: 35px;
+    width: 100%;
+    background-color: green;
+
+    text-align: center;
+    line-height: 35px;
+}
+
+/*内容*/
+section{
+    flex: 1;
+}
+
+/*尾部*/
+footer{
+    height: 35px;
+    width: 100%;
+    background: green;
+
+    display: flex;
+    flex-direction: row;
+}

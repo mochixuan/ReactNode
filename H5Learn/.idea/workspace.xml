@@ -13,7 +13,21 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="h8-bottom.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/html/h8-bottom.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="109">
+              <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+              <folding>
+                <element signature="e#497#521#0" />
+                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -35,6 +49,7 @@
         <option value="$PROJECT_DIR$/html/h5-form.html" />
         <option value="$PROJECT_DIR$/html/h6-label.html" />
         <option value="$PROJECT_DIR$/html/h7-selector.html" />
+        <option value="$PROJECT_DIR$/html/h8-bottom.html" />
       </list>
     </option>
   </component>
@@ -48,7 +63,7 @@
     <option name="x" value="753" />
     <option name="y" value="23" />
     <option name="width" value="687" />
-    <option name="height" value="795" />
+    <option name="height" value="792" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -124,16 +139,20 @@
       <workItem from="1544226574802" duration="3465000" />
       <workItem from="1544429053046" duration="2230000" />
       <workItem from="1544500330884" duration="227000" />
+      <workItem from="1548331578189" duration="1364000" />
+      <workItem from="1548381273377" duration="178000" />
+      <workItem from="1548396547516" duration="2828000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16231000" />
+    <option name="totallyTimeSpent" value="20601000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="753" y="23" width="687" height="795" extended-state="0" />
+    <frame x="753" y="23" width="687" height="792" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.5416036" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2553041" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -159,6 +178,24 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/html/h8-bottom.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="34" column="27" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="27" />
+          <folding>
+            <element signature="e#497#521#0" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/h8-bottom.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="34" column="27" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/html/h7-selector.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
@@ -222,13 +259,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/h0.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/h5-form.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
@@ -247,6 +277,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
           <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/h0.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/h8-bottom.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+          <folding>
+            <element signature="e#497#521#0" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>

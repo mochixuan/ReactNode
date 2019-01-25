@@ -1,0 +1,29 @@
+.main_tab {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.main_tab_ul {
+    height: 48px;
+    background-color: rgb(233, 32, 61);
+}
+
+.main_tab_li {
+    color: #CDCDCD;
+    font-size: 16px;
+    line-height: 48px;
+    float: left;
+    width: 25%;
+    text-align: center;
+    list-style: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.main_tab_li_selected {
+    font-size: 18px;
+    color: #ffffff;
+}

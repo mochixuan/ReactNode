@@ -1,0 +1,53 @@
+.swipe {
+    background-color: #fff;
+}
+
+.swipe_div {
+    width: 100%;
+}
+
+.swipe_ul {
+    width: 100%;
+    height: auto;
+}
+
+.swipe_li {
+    display: block;
+    width: 20%;
+
+    float: left;
+    font-size: 14px;
+    color: #666;
+    list-style: none;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 10px;
+
+    background-size: 50px auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.swipe_dot_ul {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.swipe_dot {
+    width: 8px;
+    height: 8px;
+    background-color: #666;
+    margin: 3px;
+    border-radius: 4px;
+}
+
+.swipe_dot_selected {
+    width: 8px;
+    height: 8px;
+    background-color: rgb(233, 32, 61);
+    margin: 3px;
+    border-radius: 4px;
+}

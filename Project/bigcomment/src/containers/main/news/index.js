@@ -4,7 +4,9 @@ import {connect} from 'react-redux'
 class Page extends Component{
     render() {
         return (
-            <div>UserPage</div>
+            <div>
+                资讯
+            </div>
         )
     }
 }
@@ -17,6 +19,6 @@ const mapDispatchToProps = (dispatch) => ({
 
 })
 
-const UserPage = connect(mapStateToProps,mapDispatchToProps)(Page)
+const NewsTabPage = connect(mapStateToProps,mapDispatchToProps)(Page)
 
-export {UserPage}
+export {NewsTabPage}

@@ -1,18 +1,24 @@
 import React,{Component} from 'react'
 import {connect} from 'react-redux'
-import {Link} from 'react-router-dom'
+import {HomeTabPage} from './home'
+import {FindTabPage} from './find'
+import {NewsTabPage} from './news'
+import {UserTabPage} from './user'
+import {MainTabView} from '../../components/main'
+import {Switch,Route,Redirect} from 'react-router-dom'
 
 class Page extends Component{
     render() {
         return (
             <div>
-                <div>MainPage</div>
-                <div>
-                    <Link to={'/city'}>城市</Link>
-                </div>
-                <div>
-                    <Link to={{pathname: '/home',search: '', hash: '', key: 'abc123', state: {}}}>主页</Link>
-                </div>
+                <Switch>
+                    <Route path={'/home'} component={HomeTabPage}/>
+                    <Route path={'/find'} component={FindTabPage}/>
+                    <Route path={'/news'} component={NewsTabPage}/>
+                    <Route path={'/user'} component={UserTabPage}/>
+                    <Redirect to={'/home'}/>
+                </Switch>
+                <MainTabView/>
             </div>
         )
     }
