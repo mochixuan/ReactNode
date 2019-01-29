@@ -6,6 +6,7 @@
     "antd-mobile": "^2.2.8",
     "babel-plugin-import": "^1.11.0",
     "immutable": "^4.0.0-rc.12",
+    "less": "^3.9.0",
     "less-loader": "^4.1.0",
     "react": "^16.7.0",
     "react-addons-css-transition-group": "^15.6.2",

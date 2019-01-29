@@ -1,0 +1,74 @@
+span {
+  background-color: #5dc7c6;
+  color: #000;
+  font-size: 40px;
+}
+.li {
+  display: inline-block;
+  float: left;
+  height: 80px;
+  width: 80px;
+  border-radius: 10px;
+  background-color: #5dc7c6;
+  line-height: 80px;
+  text-align: center;
+  color: white;
+}
+.top-li {
+  display: inline-block;
+  float: left;
+  height: 80px;
+  width: 80px;
+  border-radius: 10px;
+  background-color: #5dc7c6;
+  line-height: 80px;
+  text-align: center;
+  color: white;
+  border-radius: 20px;
+  margin-left: 10px;
+}
+#bottom-li {
+  display: inline-block;
+  float: left;
+  height: 80px;
+  width: 80px;
+  border-radius: 10px;
+  background-color: #5dc7c6;
+  line-height: 80px;
+  text-align: center;
+  color: white;
+  font-size: 40px;
+}
+.external {
+  clear: both;
+  display: block;
+}
+.external > div {
+  background-color: antiquewhite;
+}
+.external > div > ul {
+  float: right;
+  margin: 10px;
+  background-color: bisque;
+}
+.external > div > ul > li {
+  font-size: 20px;
+}
+.one {
+  clear: both;
+  width: 60px;
+  background-color: #5dc7c6;
+}
+.two {
+  width: 120px;
+  background-color: #5dc7c6;
+}
+.three {
+  height: 50px;
+  width: 50px;
+  background-color: #004590;
+}
+.three:hover {
+  background-color: rgba(0, 69, 144, 0.5);
+}
+/*# sourceMappingURL=style.css.map */
