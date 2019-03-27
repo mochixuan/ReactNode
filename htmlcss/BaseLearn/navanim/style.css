@@ -1,0 +1,53 @@
+.main {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+}
+
+.nav {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    border: coral 1px dashed;
+    transition: all 1s ease-out;
+}
+
+.nav-open {
+    transform: scale(1) rotate(0deg);
+}
+
+.nav-close {
+    transform: scale(0) rotate(180deg);
+}
+
+
+.nav-item {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 20px;
+    color: white;
+    background-color: #3aafff;
+}
+
+.button {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    position: absolute;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    outline: none;
+    background-color: #3aafff;
+    color: white;
+    border: 0;
+}
+
+.button:active {
+    background-color: #2e7ab9;
+}
