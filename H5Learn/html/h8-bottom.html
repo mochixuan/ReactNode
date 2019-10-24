@@ -35,10 +35,20 @@
             background-color: red;
         }
     </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            let  i = 0;
+            let testElement = document.getElementById("test");
+            setInterval(()=>{
+                i++;
+                testElement.setAttribute("class",i+"");
+            },1000)
+        }
+    </script>
 </head>
 <body>
     <header>Header</header>
-    <div class="center">
+    <div class="center" id="test">
         <p>Article</p>
         <p>Article</p>
         <p>Article</p>

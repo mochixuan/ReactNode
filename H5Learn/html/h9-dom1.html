@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom基础</title>
+</head>
+<body>
+    <div id="age">age</div>
+    <div class="name">name1</div>
+    <div class="name">name2</div>
+    <div id="word">
+        天涯<span>海角</span>，支持<span>知识</span>！
+    </div>
+    <div id="text" class="test1"></div>
+    <input name="password" />
+    <script>
+        const ageItem = document.getElementById('age')
+        const nameItems = document.getElementsByClassName('name');
+        const spanTagItems = document.getElementsByTagName('span');
+        const wangItems = document.getElementsByName('password')
+        const wordId = document.getElementById('word');
+        const textId = document.getElementById('text');
+
+        //修改属性
+        ageItem.style.color = 'red'
+        nameItems[0].innerHTML = '内置'
+        wangItems[0].style.color = 'red'
+
+        //设置属性
+        console.warn('getAttribute(\'id\')',ageItem.getAttribute('id'))
+        nameItems[1].setAttribute('innerHTML','被设置了属性')
+
+        //创建节点
+        const createdDiv = document.createElement('div')
+        //createdDiv.innerHTML = '被创建的属性内容'
+        const text = document.createTextNode('被创建的属性内容')
+        createdDiv.appendChild(text)
+        const attr = document.createAttribute('class')
+        attr.value = 'attr'
+        createdDiv.setAttributeNode(attr)
+        document.body.appendChild(createdDiv)
+
+        console.warn('children',wordId.children)
+        console.warn('childrenNode',wordId.childNodes)
+
+        console.warn('innerHTML',wordId.innerHTML)
+        console.warn('innerText',wordId.innerText)
+
+        console.warn('nodeType',wordId.nodeType)
+
+        //textId.innerText = '<p>mochixuan</p>'
+        //textId.innerHTML = '<p>mochixuan</p>'
+        // textId.textContent = '<p>mochixuan</p>'
+        let b = {}
+        for (let {name,value} of textId.attributes) {
+            b[name] = value;
+        }
+        console.warn('attr:',b);
+
+        const div = document.createElement("div");
+        div.innerHTML = "<p>abc</p>";
+        document.body.appendChild(div);
+
+        const textNode = document.createTextNode("<p>abc</p>")
+        const div1 = document.createElement("div");
+        div1.appendChild(textNode);
+        document.body.appendChild(div1);
+
+    </script>
+</body>
+</html>

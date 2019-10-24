@@ -2,7 +2,7 @@ function deepClone(obj) {
     let objClone = Array.isArray(obj) ? [] : {}
     if (obj && typeof obj === 'object') {
         for (let key in obj) {
-            if (obj.hasOwnProperty(key)) {
+            if (obj.hasOwnProperty(key)) { // 该方法会忽略掉那些从原型链上继承到的属性
                 if (obj[key] && typeof obj[key] === 'object') {
                     objClone[key] = deepClone(obj[key])
                 } else {
@@ -15,6 +15,8 @@ function deepClone(obj) {
     }
     return objClone;
 }
+
+
 
 function qSort(arr,low,high) {
     if (low < high) {
