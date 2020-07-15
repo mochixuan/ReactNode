@@ -1,6 +1,7 @@
   const path = require('path')
   const HtmlWebpackPlugin = require('html-webpack-plugin')
   const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+  const webpack = require('webpack')
 
   module.exports = {
     // entry: './src/index.js', // 和下面一样的
@@ -16,10 +17,22 @@
         host: '0.0.0.0', //必须设置、本地有点问题
         proxy: {
             "/api": "http://localhost:3000"
-        }
+        }, 
+        hot: true,
+        hotOnly: true, // 网页就算被修改也不自动刷新
     },
     module: {
         rules: [{
+            test: /\.js$/,
+            exclude: /node_modules/, //不转码 这个里的文件
+            loader: 'babel-loader',
+            options: {
+                presets: [[
+                    '@babel/preset-env',
+                    {useBuiltIns: 'usage'}
+                ]]
+            }
+        },{
             test: /\.(jpg|png|gif)$/,
             use: {
                 // loader: 'file-loader', // 愿文件 
@@ -57,12 +70,16 @@
         filename: 'bundle.js', // 生成文件
         path: path.resolve(__dirname, 'release') //__dirname当前配置文件的地址（拼接）路径
     },
+    optimization: {
+        usedExports: true, //只打包需要的
+    },
      // plugin: 配置是在项目打包完成的前后进行配置的选项
     plugins: [
         new HtmlWebpackPlugin({
             //publicPath: 'https://github.com', // html中所以引入的文件加前缀
             template: 'src/index.html' // 自动生产html根据模版
         }),
-        new CleanWebpackPlugin()
+        new CleanWebpackPlugin(),
+        new webpack.HotModuleReplacementPlugin(), // 配置热更新
     ]
   }
