@@ -1,0 +1,10 @@
+{
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "tslint.autoFixOnSave": true,
+    "tslint.jsEnable": true,
+    "tslint.run": "onType",
+    "editor.tabSize": 2,
+    "editor.detectIndentation": false,
+    "editor.formatOnPaste": false,
+    "java.configuration.updateBuildConfiguration": "automatic"
+}

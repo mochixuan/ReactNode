@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>History</title>
+</head>
+<body>
+  <script>
+    window.addEventListener('popstate',()=>{
+      console.warn('dadasda');
+    })
+    function jump() {
+      window.history.pushState({name: 'mochixuan'}, '/test1', 'test1')
+    }
+  </script>
+  History
+  <button onclick="jump()">跳转</button>
+  
+</body>
+</html>
