@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+    <link href="../src/index.css" rel="stylesheet"/>
+    <link href="./basci.css" rel="stylesheet" />
+    <title>移动端适配</title>
+    <!-- <script>
+        (function (baseFontSize=1) {
+            const _baseFontSize = baseFontSize || 75;
+            const ua = navigator.userAgent;
+            const matches = ua.match(/Android[\S\s]+AppleWebkit\/(\d{3})/i);
+            const isIos = navigator.appVersion.match(/(iphone|ipad|ipod)/gi);
+            const dpr = window.devicePixelRatio || 1;
+            if (!isIos && !(matches && matches[1] > 534)) {
+            // 如果非iOS, 非Android4.3以上, dpr设为1;
+            dpr = 1;
+            }
+            const scale = 1 / dpr;
+            const metaEl = document.querySelector('meta[name="viewport"]');
+            if (!metaEl) {
+            metaEl = document.createElement('meta');
+            metaEl.setAttribute('name', 'viewport');
+            window.document.head.appendChild(metaEl);
+            }
+            metaEl.setAttribute('content', 'width=device-width,user-scalable=no,initial-scale=' + scale + ',maximum-scale='
+            + scale + ',minimum-scale=' + scale);
+            document.documentElement.style.fontSize = document.documentElement.clientWidth / (750 / _baseFontSize) + 'px';
+        })();
+    </script> -->
+</head>
+<body>
+    <div>
+        <div class="box">
+            <p>今夕何夕兮，搴舟中流。
+                今日何日兮，得与王子同舟。
+                蒙羞被好兮，不訾诟耻。
+                心几烦而不绝兮，得知王子。</p>
+        </div>
+        <div class="box2"></div>
+        <div class="box1">
+            <p>今夕何夕兮，搴舟中流。
+                今日何日兮，得与王子同舟。
+                蒙羞被好兮，不訾诟耻。
+                心几烦而不绝兮，得知王子。</p>
+        </div>
+    </div>
+    <script src="./baisc.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+.wx-item {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.wx-item-label {
+  font-size: 16px;
+  color: '#444';
+  margin-right: 10px;
+  display: inline-block;
+}

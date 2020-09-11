@@ -10,8 +10,12 @@ const Main = () => {
     <div>
       Main
       <ol>
+        <li><Link to='/basicComponent' >基本组件封装</Link></li>
         <li><Link to='/home' >模拟登入</Link></li>
-        <li><Link to='/first' >跳转到First</Link></li>
+        <li><Link to='/parent' >跳转Parent</Link></li>
+        <li><Link to='/hooktest' >跳转Hook</Link></li>
+        <li><Link to='/firstloadable' >跳转到First Loadabel模式</Link></li>
+        <li><Link to='/firstlazy' >跳转到First firstlazy模式</Link></li>
         <li><Link to='/system' >System</Link></li>
         <li><Link to='/second' style={{color: 'red',textDecoration: 'none'}}>跳转到Second</Link></li>
         <li><Link to='/three' >跳转到Three</Link></li>

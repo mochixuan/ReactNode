@@ -1,0 +1,15 @@
+.item {
+    width: 100px;
+    height: 100px;
+    color: azure;
+    background-color: bisque;
+    margin: 20px;
+}
+
+.item1 {
+    width: 100px;
+    height: 100px;
+    color: azure;
+    background-color: coral;
+    margin: 20px;
+}

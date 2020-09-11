@@ -1,0 +1,9 @@
+.box {
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.box-item {
+  width: 400px !important;
+  
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+        html,body {
+            width: 100%;
+            height: 100%;
+        }
+        div{
+            font-size: 20px;
+            margin-left: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div>我是谁，我来自那里</div>
+    <canvas id='canvas' style="background-color: antiquewhite;"></canvas>
+    <script>
+        const canvas = document.getElementById('canvas');
+        let ctx = canvas.getContext('2d');
+
+        const url ='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595686217237&di=8f15a16f5b65ecdf778d0857a6945c58&imgtype=0&src=http%3A%2F%2Fgb.cri.cn%2Fmmsource%2Fimages%2F2014%2F08%2F19%2Fc37ce31c62164679989dd0b703e67a13.jpg';
+
+        const ua = navigator.userAgent;
+        const matches = ua.match(/Android[\S\s]+AppleWebkit\/(\d{3})/i);
+        const isIos = navigator.appVersion.match(/(iphone|ipad|ipod)/gi);
+        let dpr = window.devicePixelRatio || 1;
+        if (!isIos && !(matches && matches[1] > 534)) {
+            // 如果非iOS, 非Android4.3以上, dpr设为1;
+            dpr = 1;
+        }
+
+        const backingStore = ctx.backingStorePixelRatio ||
+        ctx.webkitBackingStorePixelRatio ||
+        ctx.mozBackingStorePixelRatio ||
+        ctx.msBackingStorePixelRatio ||
+        ctx.oBackingStorePixelRatio ||
+        ctx.backingStorePixelRatio || 1;
+
+        const ratio = dpr / backingStore;
+
+        const w = window.innerWidth;
+
+        canvas.style.width = w + "px";
+        canvas.style.height = window.innerHeight + "px";
+    
+        const width = w*ratio;
+        const height = window.innerHeight*ratio;
+        canvas.width = width;
+        canvas.height = height;
+        ctx.scale(ratio, ratio);
+        
+        ctx.strokeStyle = "red";
+        ctx.lineWidth = 10;
+        ctx.strokeRect(10, 10, 100, 100);
+
+        ctx.font = (20)+"px sans-serif"
+        ctx.fillText('我是谁，我来自那里', 150, 70)
+        
+        const img = new Image();
+        img.src = url;
+        img.onload=function(){
+            ctx.drawImage(img, 0 , 120 , w, w*108/192)
+        }
+
+        const img1 = new Image();
+        img1.src = './timg1.png';
+        img1.onload=function(){
+            ctx.drawImage(img1, 0 , 350 , w, w)
+        }
+    </script>
+</body>
+</html>

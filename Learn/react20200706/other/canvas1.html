@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id='canvas'></canvas>
+    <script>
+      let canvas = document.getElementById('canvas');
+      if(canvas.getContext) {
+        let ctx = canvas.getContext('2d');
+        // *****************解决移动端糊的问题
+        let dpr = window.devicePixelRatio; // 假设dpr为2
+        // 获取css的宽高
+        let { width: cssWidth, height: cssHeight } = canvas.getBoundingClientRect();
+        // 根据dpr，扩大canvas画布的像素，使1个canvas像素和1个物理像素相等
+        canvas.style.width = canvas.width + 'px';
+        canvas.style.height = canvas.height + 'px';
+     
+        canvas.width = dpr * cssWidth;
+        canvas.height = dpr * cssHeight;
+        // 由于画布扩大，canvas的坐标系也跟着扩大，如果按照原先的坐标系绘图内容会缩小
+        // 所以需要将绘制比例放大
+        ctx.scale(dpr,dpr);
+        // **************************
+
+        for(let i = 0; i < listSubPercent.length; i++) {
+          ctx.beginPath();
+          let startAngle = listSubPercent[i] * Math.PI / 180;
+          let endAngle = listSubPercent[i + 1] * Math.PI / 180;
+          ctx.arc(pointX, pointY, sectorR, startAngle, endAngle, false);
+          ctx.lineTo(pointX, pointY); //转折点
+          ctx.fillStyle = colorList[i];
+          ctx.fill(); //扇形填充
+        }
+        //绘制圆形
+        ctx.beginPath();
+        ctx.moveTo(pointX, pointY); //起始点中心坐标点
+        let startAngle = 0; // 开始点
+        let endAngle = 2 * Math.PI;
+        ctx.arc(pointX, pointY, circleR, startAngle, endAngle, true);
+        
+        ctx.fillStyle = fillColor; //作对比  暂用此颜色  需要改为黑色才能和三角拼接  rgba(255,165,0,1)类也可以
+        ctx.fill(); //圆形填充
+
+        //中间位置的度数
+        let middleDegree = (listSubPercent[num + 1] - listSubPercent[num]) / 2 + listSubPercent[num];
+        middleDegree = 90 - middleDegree;
+        //三角形底边的另一个点的位置
+        let X1 = Math.sin((middleDegree + 90) * Math.PI / 180) * 30 + pointX;
+        let Y1 = Math.cos((middleDegree + 90) * Math.PI / 180) * 30 + pointY;
+        //三角形底边的一个点的位置
+        let X = Math.sin((middleDegree + 270) * Math.PI / 180) * 30 + pointX;
+        let Y = Math.cos((middleDegree + 270) * Math.PI / 180) * 30 + pointY;
+        //三角形顶点的位置
+        let RX = Math.sin(middleDegree * Math.PI / 180) * 60 + pointX;
+        let RY = Math.cos(middleDegree * Math.PI / 180) * 60 + pointY;
+        ctx.beginPath();
+        ctx.moveTo(X1, Y1); //起始点
+        ctx.lineTo(X, Y); //转折点
+        ctx.lineTo(RX, RY); //结束点
+        ctx.fillStyle = fillColor;
+        ctx.fill(); //三角形填充
+
+        // 绘制文字
+        ctx.font = "16px sans-serif";
+        ctx.fillStyle = textColor;
+        ctx.fillText(data[0].ratingagency, 70, 95);
+        ctx.font = "14px sans-serif";
+        ctx.fillStyle = textColor;
+        ctx.fillText(`${data[0].percentage}%`, 80, 115);
+      }
+    </script>
+</body>
+</html>

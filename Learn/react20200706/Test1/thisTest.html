@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>this的指向问题</title>
+</head>
+<body>
+  <div>
+    <ul id='list'>
+      <li>哈哈哈1</li>
+      <li>哈哈哈2</li>
+      <li>哈哈哈3</li>
+      <li>哈哈哈4</li>
+      <li>哈哈哈5</li>
+      <li>哈哈哈6</li>
+      <li>哈哈哈7</li>
+      <li>哈哈哈8</li>
+    </ul>
+  </div>
+  <script>
+    // const listChild = document.querySelectorAll('li');
+    // for(let j = 0 ; j < listChild.length ; j++) {
+    //   listChild[j].onclick = function() {
+    //     alert(j);
+    //   }
+    // }
+
+    const listChild = document.querySelectorAll('li');
+    for(let j = 0 ; j < listChild.length ; j++) {
+      listChild[j].onclick = function() {
+        alert(j);
+      };
+    }
+  </script>
+</body>
+</html>

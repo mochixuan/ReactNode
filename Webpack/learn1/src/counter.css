@@ -1,0 +1,5 @@
+#hot div:nth-of-type(odd) {
+    background-color: mediumseagreen;
+    color: coral;
+
+}

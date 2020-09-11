@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let count = 0;
+        function loop() {
+            count = count+1;
+            if (count > 5) return;
+            requestAnimationFrame(()=>{
+                console.warn('requestAnimationFrame')
+                loop();
+            })
+        }
+        function changeData() {
+
+            loop();
+            setTimeout(()=>{ console.warn('timeout') },0)
+            Promise.resolve().then(()=> console.warn('promise'))
+            
+            const ele = document.getElementById('test');
+            const ele1 = document.getElementById('test1');
+            console.warn('开始');
+            let a = 1;
+            a = a + 1;
+            a = a + 2;
+            console.warn('绘制开始');
+            ele.style.width = (ele1.offsetWidth+1000) + 'px';
+            console.warn(ele.style.width);
+            let w = 10000000000;
+            while(w > 0) {
+                w = w - 1;
+            }
+            console.warn('中件');
+            // ele.style.width = '100px'
+            a = a + 1;
+            a = a + 2;
+            console.warn("结束")
+        }
+    </script>
+    <div id='test' style="height: 100px;width: 100px;background-color: red;"></div>
+    <button id="test1">asasa</button>
+    <button onclick="changeData()">按钮</button>
+    
+</body>
+</html>

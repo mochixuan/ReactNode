@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            overflow: scroll;
+            padding: 10px;
+            margin: 20px;
+            background-color: blanchedalmond;
+            border: 12px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div id='mea' style="width: 100px; ">
+        诗歌，是一种抒情言志的文学体裁。是用高度凝练的语言，生动形象地表达作者丰富情感，集中反映社会生活并具有一定节奏和韵律的文学体裁。《毛诗-大序》记载：“诗者，志之所之也。在心为志，发言为诗”。南宋严羽《沧浪诗话》云：“诗者，吟...
+    </div>
+    <script>
+        const mea = document.getElementById('mea');
+        console.log('clientHeight: ', mea.clientHeight)
+        console.log('offsetHeight: ', mea.offsetHeight)
+        console.log('style.width: ', mea.style.width)
+        console.log('clientWidth: ', mea.scrollHeight)
+    </script>
+    <script>
+        if (window.Worker) {
+            const myTask = `
+                console.log('web worker js');
+                function count() {
+                    postMessage({name: 'worker线程'});
+                }
+                // 监听
+                onmessage = function(e) {
+                    console.log ('收到主线程的数据: ', e.data);
+                }
+                count()
+            `
+            const blob = new Blob([myTask]);
+            console.warn(window.URL.createObjectURL(blob))
+            const worker = new Worker(window.URL.createObjectURL(blob));
+            // const worker = new Worker('./measure.js');
+            // 发送数据
+            worker.postMessage({name: '主线程'})
+            // 监听
+            worker.onmessage = function(e) {
+                console.log('收到worker的数据: ', e.data)
+            }
+        }
+    </script>
+</body>
+</html>

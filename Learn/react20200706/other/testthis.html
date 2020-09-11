@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+        }
+        @keyframes GoRound {
+            0% {
+                /* transform: translate(0px, 0px); */
+                left: 0px;
+                top: 0px;
+            }
+            25% {
+                /* transform: translate(100px, 0px); */
+                left: 100px;
+                top: 0px;
+            }
+            50% {
+                /* transform: translate(100px, 100px); */
+                left: 100px;
+                top: 100px;
+            }
+            75% {
+                /* transform: translate(0px, 100px); */
+                left: 0px;
+                top: 100px;
+            }
+            100% {
+                /* transform: translate(0px, 0px); */
+                left: 0px;
+                top: 0px;
+            }
+        }
+        .start {
+            animation: GoRound 3s infinite;
+        }
+
+        
+    </style>
+    <script>
+        let isStart = false;
+        function changeState() {
+            let root = document.getElementById('root')
+            isStart = !isStart;
+            root.className = isStart ? 'start' : ''
+        }
+    </script>
+</head>
+<body>
+    <button onclick="changeState()">切换</button>
+    <div id='root'></div>
+</body>
+</html>

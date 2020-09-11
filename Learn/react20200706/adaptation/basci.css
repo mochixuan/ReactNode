@@ -1,0 +1,15 @@
+.box {
+    background-color: aquamarine;
+}
+.box2 {
+    width: 50%;
+    height: 60px;
+    background-color:blue;
+    border: 1px solid red;
+}
+
+.box1 {
+    width: 375px;
+    font-size: 32px;
+    background-color: red;
+}

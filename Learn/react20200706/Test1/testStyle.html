@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML</title>
+  <style>
+    body {
+      background: #fff !important;
+    }
+    .root {
+      border: 3px #000 solid;
+      width: 200px;
+    }
+    .root div {
+      box-sizing: border-box;
+      border: 1px #000 solid;
+      /* background-color: #fff; */
+    }
+    .div-a {
+      z-index: 100;
+      width: 200px;
+      height: 100px;
+      background-color: antiquewhite;
+      
+    }
+    .div-b {
+      z-index: 200;
+      width: 100px;
+      height: 50px;
+      position: relative;
+      background-color: aquamarine;
+    }
+    .div-c {
+      z-index: 110;
+      width: 50px;
+      height: 100px;
+      background-color: red;
+      position: absolute;
+      top: 0px;
+    }
+  </style>
+</head>
+<body>
+  <div class="root">
+    <div class="div-a">
+      <div class="div-b"></div>
+    </div>
+    <div class="div-c"></div>
+   </div>
+</body>
+</html>

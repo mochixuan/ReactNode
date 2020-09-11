@@ -1,0 +1,50 @@
+.box {
+    /* display: flex;
+    justify-content: space-between; */
+    margin: 16px;
+    font-size: 12px;
+    border-radius: 4rem;
+    height: 60px;
+    background-color: #faebd7;
+    margin-top: 100px;
+}
+
+.box1 {
+    display: flex;
+    background-color: coral;
+    font-size: 10px;
+}
+
+.i1 {
+    color: black;
+    font-size: 13px;
+}
+
+li {
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    line-height: 40px;
+    border-bottom: 1px solid blue;
+}
+
+li:nth-of-type(2n) {
+    border-image-source: url('../../img/line.png');
+    border-image: url('../../img/line.png') 2 0 stretch;
+    border-width: 1px;
+    border-image-repeat: stretch;
+    border-image-slice: 4;
+    color: red;
+}
+
+li:nth-of-type(2) {
+    background-color: antiquewhite;
+    border-image: url('../../img/night.png') 90 0 round;
+    border-width: 30px;
+    width: 180px;
+    height: 120px;
+    display: block;
+}
+
+
+@media screen and (max-width: 749.9px) {}
