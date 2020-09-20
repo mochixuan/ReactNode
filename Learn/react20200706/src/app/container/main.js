@@ -11,6 +11,7 @@ const Main = () => {
       Main
       <ol>
         <li><Link to='/basicComponent' >基本组件封装</Link></li>
+        <li><Link to='/demoTable' >Table封装</Link></li>
         <li><Link to='/home' >模拟登入</Link></li>
         <li><Link to='/parent' >跳转Parent</Link></li>
         <li><Link to='/hooktest' >跳转Hook</Link></li>

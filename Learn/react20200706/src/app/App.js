@@ -19,6 +19,7 @@ import HookTest from './container/test1/hook';
 import {BasicComponent} from './container/basic/basic-component';
 
 import 'antd/dist/antd.css';
+import { DemoTable } from './container/table/DemoTable';
 
 // import First from './container/first'
 
@@ -50,6 +51,7 @@ function App() {
         <ErrorBoundary>
           <Switch>
             <Route path='/' exact component={Main} />
+            <Route path='/demoTable' exact component={DemoTable} />
             <Route path='/basicComponent' exact component={BasicComponent} />
             <Route path='/home' component={Home} />
             <Route path='/hooktest' component={HookTest} />
