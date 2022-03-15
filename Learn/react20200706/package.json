@@ -136,7 +136,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.10.5",
     "antd": "^4.5.1",
-    "lodash-es": "^4.17.15",
+    "lodash-es": "^4.17.21",
     "postcss-pxtorem": "^5.1.1"
   }
 }
